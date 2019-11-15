@@ -64,7 +64,6 @@ WHERE EXISTS(
 /*********************5***************************/
 /*Organizations stock the store */ 
 
-
 INSERT INTO store (
                       item_desc,
                       item_name,
@@ -89,6 +88,8 @@ WHERE item_desc LIKE 'Bobcat Pantry%';
 
 /***********************7***********************/
 /*Student purchases item by filtering */
-SELECT item_name , item_
+SELECT item_name , item_desc
 FROM store 
 WHERE item_name LIKE 'Shirt%' 
+/***********************7***********************/
+/*Student purchases item by filtering */
