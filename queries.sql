@@ -105,7 +105,11 @@ set item_quantity = (Select item_quantity
 					item_quantity - 1)
 					
 /***********************10***********************/
-
+/**********************17********************/
+/*** Count the number of events happening in after August **/
+SELECT COUNT(e_name)
+FROM events 
+WHERE e_date LIKE "2019-08-%";
 /**********************18*****************/
 /** Find the number of events happening today **/
 SELECT *
