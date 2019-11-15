@@ -92,3 +92,17 @@ WHERE item_desc LIKE 'Bobcat Pantry%';
 SELECT item_name , item_
 FROM store 
 WHERE item_name LIKE 'Shirt%' 
+
+/**********************8************************/
+/*orgs remove items from the store*/
+DELETE FROM store
+    WHERE item_id = 2
+	
+/***********************9***********************/
+/*students purchase items*/
+UPDATE store
+set item_quantity = (Select item_quantity
+					WHERE item_id = 3
+					item_quantity - 1)
+					
+/***********************10***********************/
