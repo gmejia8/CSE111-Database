@@ -85,10 +85,9 @@ WHERE o_name LIKE 'Basic%' ),
 SELECT SUM(item_quantity)
 FROM store
 WHERE item_desc LIKE 'Bobcat Pantry%';
-
 /***********************7***********************/
 /*Student purchases item by filtering */
-SELECT item_name , item_desc
+SELECT item_name , item_
 FROM store 
 WHERE item_name LIKE 'Shirt%' 
 
@@ -98,23 +97,22 @@ DELETE FROM store
     WHERE item_id = 2
 	
 /***********************9***********************/
-/*students purchase items*/
-UPDATE store
-set item_quantity = (Select item_quantity
-					WHERE item_id = 3
-					item_quantity - 1)
+/*how many orgs are there for me to contact?*/
+SELECT COUNT(o_name)
+FROM organizations;
 					
 /***********************10***********************/
-/***********************16**********************/
-/*** COUNT the number of different items bobcat pantry has**/
-SELECT COUNT(item_id)
-FROM store
-WHERE item_desc LIKE "Bobcat Pantry"
-/**********************17********************/
-/*** Count the number of events happening in after August **/
+/*How many events happened in the year 2019*/ 
 SELECT COUNT(e_name)
 FROM events 
-WHERE e_date LIKE "2019-08-%";
+WHERE e_date like "2019%";
+
+/***********************11***********************/
+/*how many items are in the store?*/
+SELECT COUNT(item_name)
+FROM store;
+
+
 /**********************18*****************/
 /** Find the number of events happening today **/
 SELECT *
