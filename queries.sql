@@ -105,6 +105,11 @@ set item_quantity = (Select item_quantity
 					item_quantity - 1)
 					
 /***********************10***********************/
+/***********************16**********************/
+/*** COUNT the number of different items bobcat pantry has**/
+SELECT COUNT(item_id)
+FROM store
+WHERE item_desc LIKE "Bobcat Pantry"
 /**********************17********************/
 /*** Count the number of events happening in after August **/
 SELECT COUNT(e_name)
