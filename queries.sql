@@ -91,5 +91,32 @@ WHERE item_desc LIKE 'Bobcat Pantry%';
 SELECT item_name , item_desc
 FROM store 
 WHERE item_name LIKE 'Shirt%' 
+<<<<<<< HEAD
 /***********************7***********************/
 /*Student purchases item by filtering */
+=======
+
+/**********************8************************/
+/*orgs remove items from the store*/
+DELETE FROM store
+    WHERE item_id = 2
+	
+/***********************9***********************/
+/*students purchase items*/
+UPDATE store
+set item_quantity = (Select item_quantity
+					WHERE item_id = 3
+					item_quantity - 1)
+					
+/***********************10***********************/
+>>>>>>> 824afb4344d8dde69a3e9b7c644c5fb6363d9e30
+/***********************20**************/
+/***FInd the number of items in the store uploaded by Bobcat Pantry **/
+SELECT COUNT(item_desc)
+FROM store 
+WHERE item_desc LIKE 'Bobcat Pantry'
+/***********************20**************/
+/***FInd the number of items in the store uploaded by Bobcat Pantry **/
+SELECT COUNT(item_desc)
+FROM store 
+WHERE item_desc LIKE 'Bobcat Pantry'
