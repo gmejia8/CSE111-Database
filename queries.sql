@@ -110,11 +110,15 @@ set item_quantity = (Select item_quantity
 					
 /***********************10***********************/
 >>>>>>> 824afb4344d8dde69a3e9b7c644c5fb6363d9e30
-/***********************20**************/
-/***FInd the number of items in the store uploaded by Bobcat Pantry **/
-SELECT COUNT(item_desc)
-FROM store 
-WHERE item_desc LIKE 'Bobcat Pantry'
+
+/**********************18*****************/
+/*** Push notification that an organization has added an item to the store*/
+
+/***********************19**************/
+/***Find the password with less than 3 characters **/
+SELECT s_id, s_name, s_password
+FROM students
+WHERE s_password LIKE '___'
 /***********************20**************/
 /***FInd the number of items in the store uploaded by Bobcat Pantry **/
 SELECT COUNT(item_desc)
